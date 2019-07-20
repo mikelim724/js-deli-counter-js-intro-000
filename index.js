@@ -24,7 +24,7 @@ function currentLine(currentLine) {
         counter++;
       }
       else {
-        string = string + `${counter+1}. ${currentLine[counter]},`
+        string = string + `${counter+1}. ${currentLine[counter]}, `
         counter++;
       }
     }
