@@ -17,20 +17,20 @@ function nowServing(currentLine) {
 function currentLine(currentLine) {
   var counter = 0;
   var string = "The line is currently: "
-  if(counter < currentLine.length){
-    while (counter < currentLine.length) {
-      if ((counter + 1)===currentLine.length) {
+  if(counter < currentLine.length){   //First check if there is anyone in line 
+    while (counter < currentLine.length) {  //While there is still someone in line that hasnt been added to the string, keep repeating 
+      if ((counter + 1)===currentLine.length) { //If last person in line, don't add apostrophe at the end of the string
         string = string + `${counter+1}. ${currentLine[counter]}`
         counter++;
       }
-      else {
+      else { //Add next person in line to the exisiting string to be printed at the end
         string = string + `${counter+1}. ${currentLine[counter]}, `
         counter++;
       }
     }
-    return string
+    return string //Return string with everyone in line 
   }
-  else {
+  else { //write this if no one is in line 
     return "The line is currently empty."
   }
 }
