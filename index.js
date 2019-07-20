@@ -20,11 +20,12 @@ function currentLine(currentLine) {
   if(counter < currentLine.length){
     while (counter < currentLine.length) {
       if ((counter + 1)===currentLine.length) {
-        string = string + `${counter+1}. ${currentLine[counter]}, `
+        string = string + `${counter+1}. ${currentLine[counter]}`
         counter++;
       }
       else {
-        string = string + `${counter+1}. ${currentLine[counter]}`
+        string = string + `${counter+1}. ${currentLine[counter]},`
+        counter++;
       }
     }
     return string
